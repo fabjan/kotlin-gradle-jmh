@@ -30,6 +30,8 @@ BUILD SUCCESSFUL in 1s
 
 ### Benchmarking
 
+⚠️ This takes several minutes ⚠️
+
 ```shell
 $ ./gradlew jmh
 
@@ -43,17 +45,19 @@ Writing out Java source to ~/code/kotlin-gradle-jmh/app/build/jmh-generated-sour
 [ ... ]
 Do not assume the numbers tell you what you want them to tell.
 
-Benchmark               Mode  Cnt      Score      Error   Units
-HammingBench.testLoop  thrpt   10  45354,415 ± 5659,969  ops/ms
-HammingBench.testZip   thrpt   10   3466,672 ± 1488,412  ops/ms
-
+Benchmark                            (left)              (leftLong)  (right)             (rightLong)   Mode  Cnt      Score        Error   Units
+HammingBench.testLoop                     A  counterexcommunication        A  dacryocystoblennorrhea  thrpt    4  70251,274 ±   2361,743  ops/ms
+HammingBench.testLoop                     A  counterexcommunication        A  deanthropomorphization  thrpt    4  60238,366 ±  15400,086  ops/ms
+[ ... ]
+HammingBench.testZipIterAnonGeneric       B  dacryocystosyringotomy        C  dacryocystoblennorrhea  thrpt    4  26198,620 ±  21235,576  ops/ms
+HammingBench.testZipIterAnonGeneric       B  dacryocystosyringotomy        C  deanthropomorphization  thrpt    4  27039,246 ±   5246,881  ops/ms
 [ ... ]
 
 > Task :app:jmhReport
 JMH Report generated, please open: ~/code/kotlin-gradle-jmh/app/build/reports/jmh/index.html
 
-BUILD SUCCESSFUL in 2m 41s
-10 actionable tasks: 10 executed
+BUILD SUCCESSFUL in 5m 25s
+10 actionable tasks: 6 executed, 4 up-to-date
 ```
 
 ## Resources
